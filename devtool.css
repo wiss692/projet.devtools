@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --macouleur: rgb(56, 56, 114);
+    --macouleur2: rgb(71, 71, 71) ;
+    --macouleur3:  rgb(37, 37, 37);
+}
+
+
+header{
+    background-color: var(--macouleur);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+
+header img{
+    width: 100px;
+    height: 100%;
+    margin-left: 15px;
+}
+
+header nav{
+    width: 40vw;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a{
+    color: aliceblue;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+header nav a:hover{
+    background-color: rgb(104, 104, 212);
+}
+
+/* separation */
+
+.separation{
+    background-color: var(--macouleur);
+    color: aliceblue;
+    text-align: center;
+    height: 30%;
+}
+
+/* main */
+
+main section{
+    padding: 120px 6% 4% 6%;
+    background-color: var(--macouleur3);
+}
+
+main section h1{
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+main section p{
+    font-size: 0.9rem;
+    padding: 0 20px 20px 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+main section h1, main section p{
+    background-color: var(--macouleur);
+    color: aliceblue;
+}
+
+.favoris{
+    background-color: var(--macouleur3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favoris img{
+    width: 60vw;
+    margin: 50px 50px 50px;
+    border-radius: 10px;
+    border: solid 0.5px rgb(77, 77, 77);
+}
+
+.favoris p{
+    color: aliceblue;
+    width: 70%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.favoris a{
+    color: aliceblue;
+}
+
+.scale:hover{
+    transform: scale(1.02);
+    transition-duration: 0.5s;
+}
+
+.scale1:hover{
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+    background-color: rgb(104, 104, 212);
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". one two three ."
+                         ". for five six ."
+                         ". seven height nine .";
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--macouleur3);
+}
+
+.grid img{
+    width: 80%;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.grid p{
+    color: aliceblue;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.grid div{
+    text-align: center;
+    background-color: var(--macouleur2);
+    border-radius: 5px;
+}
+
+.grid a{
+    color: aliceblue;
+}
+
+.grid h2{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.item1{
+    grid-area: one;
+}
+
+.item2{
+    grid-area: two;
+}
+
+.item3{
+    grid-area: three;
+}
+
+.item4{
+    grid-area: for;
+}
+
+.item5{
+    grid-area: five;
+}
+
+.item6{
+    grid-area: six;
+}
+
+.item7{
+    grid-area: seven;
+}
+
+.item8{
+    grid-area: height;
+}
+
+.item9{
+    grid-area: nine;
+}
+
+
+@media screen and (max-width: 960px){
+    header{
+        justify-content: center;
+        flex-direction: column;
+        height: 80px;
+    }
+
+    header nav{
+        padding: 0;
+        width: 50vw;
+        justify-content: center;
+    }
+
+    .grid{
+        grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+        grid-template-areas: ". one two ."
+                             ". three for ."
+                             ". five six ."
+                             ". seven height ."
+                             " . nine . .";
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .favoris img{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid div{
+        border-radius: 0;
+    }
+
+    .favoris img{
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .grid img{
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .favoris p{
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 95%;
+    }
+
+    main section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
